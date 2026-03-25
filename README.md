@@ -57,3 +57,5 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 **Emirhan Üzgün**
 * LinkedIn: [@emirhanuzgun](https://www.linkedin.com/in/emirhan-üzgün/)
 * Website: [emirhanuzgun.com](https://emirhanuzgun.dev)
+
+Developed by **Emirhan Üzgün** *Industrial Design Student at Mudanya University*
