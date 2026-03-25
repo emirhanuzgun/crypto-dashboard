@@ -1,0 +1,85 @@
+:root {
+    --bg-color: #0b0e11;
+    --card-bg: #1e2329;
+    --text-color: #eaecef;
+    --accent-color: #f0b90b; /* Binance Sarısı */
+    --up-color: #0ecb81;
+    --down-color: #f6465d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.container { padding: 20px; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    background: #2b3139;
+    border: 1px solid #474d57;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #2b3139;
+}
+
+.price-up { color: var(--up-color); }
+.price-down { color: var(--down-color); }
+
+.market-list {
+    max-height: 600px; /* Sabit yükseklik kasılmayı önler */
+    overflow-y: auto;
+    background: var(--card-bg);
+    border-radius: 10px;
+}
+
+/* Scroll barı özelleştirelim (Chrome/Edge/Safari) */
+.market-list::-webkit-scrollbar {
+    width: 6px;
+}
+.market-list::-webkit-scrollbar-thumb {
+    background: #474d57;
+    border-radius: 10px;
+}
+
+tr:hover {
+    background: #2b3139;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(5px);
+}

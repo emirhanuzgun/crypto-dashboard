@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoX | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="search-area">
+                <input type="text" id="cryptoSearch" placeholder="Coin Ara (BTC, ETH...)" onkeyup="filterCoins()">
+            </div>
+            <div class="portfolio-summary">
+                <span>Toplam Varlık: <strong id="totalBalance">$0.00</strong></span>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="market-list">
+                <h3>Piyasa Takibi</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sembol</th>
+                            <th>Fiyat</th>
+                            <th>24s Değişim</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="coinTable">
+                        </tbody>
+                </table>
+            </section>
+            
+            <section class="chart-section" style="margin-bottom: 20px;">
+              <div id="chart-container">
+              <div style="height: 400px; display: flex; align-items: center; justify-content: center; background: var(--card-bg); border-radius: 10px;">
+                <p>Grafiği görmek için listeden bir coine tıklayın</p>
+                 </div>
+             </div>
+            </section>
+
+            <aside class="trade-panel">
+                <h3>Hızlı İşlem / Portföyüm</h3>
+                <div id="myPortfolio">
+                    </div>
+            </aside>
+        </main>
+    </div>
+
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <h4 id="modalCoinName">AL</h4>
+            <input type="number" id="buyAmount" placeholder="Miktar (Örn: 0.5)">
+            <input type="number" id="buyPrice" placeholder="Alış Fiyatı ($)">
+            <div class="modal-buttons">
+                <button onclick="saveToPortfolio()">Portföye Ekle</button>
+                <button onclick="closeModal()" style="background:#474d57;">İptal</button>
+            </div> 
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
